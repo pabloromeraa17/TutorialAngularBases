@@ -1,0 +1,19 @@
+<h1>Componente Hero</h1>
+
+<dl>
+    <dt> Nombre: </dt>
+    <dd> {{nombre}} </dd>
+
+    <dt> Edad: </dt>
+    <dd> {{edad}} </dd>
+
+    <dt> Método: </dt>
+    <dd> {{dimeDescripcion()}} </dd>
+
+    <dt> Mayúsculas: </dt>
+    <dd> {{ nombreMayusculas }} </dd>
+</dl>
+
+<button *ngIf="nombre == 'ironman'" (click)="cambiarNombre()" class="btn btn-primary">Cambiar Nombre</button>
+<button *ngIf="edad == 45" (click)="cambiarEdad()" class="btn btn-primary" style="margin-left: 10px;">Cambiar Edad</button>
+<button (click)="reset()" class="btn btn-primary" style="margin-left: 10px;">Reset</button>
